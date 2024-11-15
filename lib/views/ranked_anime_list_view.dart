@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:senpai_dex/common/styles/paddings.dart';
 import 'package:senpai_dex/models/anime.dart';
+import 'package:senpai_dex/widgets/anime_list_tile.dart';
 
 class RankedAnimeListView extends StatelessWidget {
   final Iterable<Anime> animes;
@@ -14,7 +15,9 @@ class RankedAnimeListView extends StatelessWidget {
           itemCount: animes.length,
           itemBuilder: (context, index) {
             final anime = animes.elementAt(index);
-            return AnimeListTile();
+            return AnimeListTile(
+              anime: anime,
+            );
           }),
     );
   }
