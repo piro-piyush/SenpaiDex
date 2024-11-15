@@ -5,6 +5,7 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, this.index});
   final int? index;
 
+  static const routeName = '/home';
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }

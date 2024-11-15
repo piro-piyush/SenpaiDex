@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:senpai_dex/screens/anime_details_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:senpai_dex/constants/app_colors.dart';
 import 'package:senpai_dex/models/anime.dart';
@@ -74,17 +76,21 @@ class TopAnimePicture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (_) => AnimeDetailsScreen(id: anime.node.id)));
+      },
       splashColor: Colors.white,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8),
         child: AspectRatio(
-          aspectRatio: 16 / 9,
-          child: Image.network(
-            anime.node.mainPicture.large,
-            fit: BoxFit.cover,
-          ),
-        ),
+            aspectRatio: 16 / 9,
+            child: CachedNetworkImage(
+              imageUrl: anime.node.mainPicture.large,
+              fit: BoxFit.cover,
+            )),
       ),
     );
   }

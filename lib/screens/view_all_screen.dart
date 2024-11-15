@@ -10,6 +10,8 @@ class ViewAllScreen extends StatelessWidget {
   const ViewAllScreen(
       {super.key, required this.rankingType, required this.label});
 
+  static const routeName = '/view-all-animes';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
