@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:senpai_dex/api/get_anime_by_ranking_type.dart';
+import 'package:senpai_dex/common/styles/text_styles.dart';
 import 'package:senpai_dex/core/screens/error_screen.dart';
 import 'package:senpai_dex/core/widgets/loader.dart';
 import 'package:senpai_dex/views/ranked_anime_list_view.dart';
@@ -12,18 +13,27 @@ class ViewAllScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getAnimeByRankingTypeApi(rankingType: rankingType, limit: 10),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Loader();
-          }
-          if (snapshot.data != null) {
-            final animes = snapshot.data;
-            return RankedAnimeListView(animes: animes!);
-          }
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          label,
+        ),
+        centerTitle: true,
+      ),
+      body: FutureBuilder(
+          future:
+              getAnimeByRankingTypeApi(rankingType: rankingType, limit: 100),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Loader();
+            }
+            if (snapshot.data != null) {
+              final animes = snapshot.data;
+              return RankedAnimeListView(animes: snapshot.data!);
+            }
 
-          return ErrorScreen(error: snapshot.error.toString());
-        });
+            return ErrorScreen(error: snapshot.error.toString());
+          }),
+    );
   }
 }

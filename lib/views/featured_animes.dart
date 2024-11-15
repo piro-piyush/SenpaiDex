@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:senpai_dex/api/get_anime_by_ranking_type.dart';
 import 'package:senpai_dex/core/screens/error_screen.dart';
 import 'package:senpai_dex/core/widgets/loader.dart';
+import 'package:senpai_dex/screens/view_all_screen.dart';
 import 'package:senpai_dex/widgets/anime_tile.dart';
 
 class FeaturedAnimes extends StatelessWidget {
@@ -34,7 +35,13 @@ class FeaturedAnimes extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 24, fontWeight: FontWeight.w600),
                       ),
-                      TextButton(onPressed: () {}, child: Text("View All")),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (_) => ViewAllScreen(
+                                    rankingType: rankingType, label: label)));
+                          },
+                          child: Text("View All")),
                     ],
                   ),
                 ),
