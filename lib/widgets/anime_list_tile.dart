@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:senpai_dex/models/anime_details.dart';
 import 'package:senpai_dex/screens/anime_details_screen.dart';
 import '/models/anime.dart';
 
