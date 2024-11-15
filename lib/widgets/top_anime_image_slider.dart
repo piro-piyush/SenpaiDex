@@ -80,7 +80,7 @@ class TopAnimePicture extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (_) => AnimeDetailsScreen(id: anime.node.id)));
+                builder: (context) => AnimeDetailsScreen(id: anime.node.id)));
       },
       splashColor: Colors.white,
       child: ClipRRect(

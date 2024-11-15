@@ -37,10 +37,10 @@ Route onGenerateRoute(RouteSettings settings) {
         ),
       );
 
-    case CategoryanimesScreen.routeName:
+    case CategoryAnimesScreen.routeName:
       final category = settings.arguments as AnimeCategory;
       return _cupertinoRoute(
-        view: CategoryanimesScreen(
+        view: CategoryAnimesScreen(
           category: category,
         ),
       );

@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:senpai_dex/models/anime_details.dart';
 import 'package:senpai_dex/screens/anime_details_screen.dart';
 import '/models/anime.dart';
 
@@ -17,14 +18,14 @@ class AnimeListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Navigator.of(context).pushNamed(
-        //   AnimeDetails.routeName,
-        //   arguments: anime.node.id,
-        // );
+        Navigator.of(context).pushNamed(
+          AnimeDetailsScreen.routeName,
+          arguments: anime.node.id,
+        );
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (_) => AnimeDetailsScreen(id: anime.node.id)));
+                builder: (context) => AnimeDetailsScreen(id: anime.node.id)));
       },
       child: Padding(
         padding: const EdgeInsets.only(

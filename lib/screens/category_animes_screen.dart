@@ -5,8 +5,8 @@ import '/core/widgets/loader.dart';
 import '/models/anime_category.dart';
 import '../views/anime_list_view.dart';
 
-class CategoryanimesScreen extends StatelessWidget {
-  const CategoryanimesScreen({
+class CategoryAnimesScreen extends StatelessWidget {
+  const CategoryAnimesScreen({
     super.key,
     required this.category,
   });
