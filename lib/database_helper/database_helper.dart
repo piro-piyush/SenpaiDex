@@ -1,6 +1,5 @@
+import 'package:senpai_dex/constants/constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '/constants/constants.dart';
 
 class DatabaseHelper {
   // Make this class a singleton

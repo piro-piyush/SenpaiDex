@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:senpai_dex/api/get_anime_by_ranking_type.dart';
+import 'package:senpai_dex/api/get_anime_by_ranking_type_api.dart';
 import 'package:senpai_dex/core/screens/error_screen.dart';
 import 'package:senpai_dex/core/widgets/loader.dart';
 import 'package:senpai_dex/models/anime_category.dart';

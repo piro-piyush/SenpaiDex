@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:senpai_dex/api/get_anime_details_api.dart';
+import 'package:senpai_dex/common/extensions/extensions.dart';
+import 'package:senpai_dex/common/styles/paddings.dart';
+import 'package:senpai_dex/common/styles/text_styles.dart';
+import 'package:senpai_dex/common/widgets/ios_back_button.dart';
 import 'package:senpai_dex/common/widgets/network_image_view.dart';
+import 'package:senpai_dex/common/widgets/read_more_text.dart';
+import 'package:senpai_dex/core/screens/error_screen.dart';
+import 'package:senpai_dex/core/widgets/loader.dart';
 import 'package:senpai_dex/cubits/anime_title_language_cubit.dart';
-import '/api/get_anime_details_api.dart';
-import '/common/extensions/extensions.dart';
-import '/common/styles/paddings.dart';
-import '/common/styles/text_styles.dart';
-import '/common/widgets/ios_back_button.dart';
-import '/common/widgets/read_more_text.dart';
-import '/core/screens/error_screen.dart';
-import '/core/widgets/loader.dart';
-import '/models/anime_details.dart';
-import '/models/picture.dart';
-import '../views/anime_horizontal_list_view.dart';
+import 'package:senpai_dex/models/anime_details.dart';
+import 'package:senpai_dex/models/picture.dart';
+import 'package:senpai_dex/views/anime_horizontal_list_view.dart';
 
 class AnimeDetailsScreen extends StatelessWidget {
   const AnimeDetailsScreen({

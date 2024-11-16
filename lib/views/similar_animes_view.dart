@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:senpai_dex/models/anime_node.dart';
 import 'package:senpai_dex/screens/anime_details_screen.dart';
-
-import '/models/anime_node.dart';
-import '/widgets/anime_tile.dart';
+import 'package:senpai_dex/widgets/anime_tile.dart';
 
 class SimilarAnimesView extends StatelessWidget {
   const SimilarAnimesView({
@@ -36,7 +35,7 @@ class SimilarAnimesView extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
-            itemCount: animes.length,
+            itemCount: animes!.length,
             separatorBuilder: (context, index) {
               return const SizedBox(width: 10);
             },
@@ -47,7 +46,7 @@ class SimilarAnimesView extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => AnimeDetailsScreen(
+                      builder: (_) => AnimeDetailsScreen(
                         id: anime.id,
                       ),
                     ),

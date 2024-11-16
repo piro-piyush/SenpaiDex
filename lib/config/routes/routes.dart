@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
-import 'package:senpai_dex/screens/category_animes_screen.dart';
-import 'package:senpai_dex/screens/view_all_screen.dart';
-import 'package:senpai_dex/screens/view_all_seasonal_animes_screen.dart';
 
 import '/common/widgets/network_image_view.dart';
 import '/core/screens/error_screen.dart';
 import '/models/anime_category.dart';
 import '/screens/anime_details_screen.dart';
+import '/screens/category_animes_screen.dart';
 import '/screens/home_screen.dart';
+import '/screens/view_all_animes_screen.dart';
+import '/screens/view_all_seasonal_animes_screen.dart';
 
 Route onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -17,12 +17,12 @@ Route onGenerateRoute(RouteSettings settings) {
         view: AnimeDetailsScreen(id: id),
       );
 
-    case ViewAllScreen.routeName:
+    case ViewAllAnimesScreen.routeName:
       final arguments = settings.arguments as Map<String, dynamic>;
       final rankingType = arguments['rankingType'] as String;
       final label = arguments['label'] as String;
       return _cupertinoRoute(
-        view: ViewAllScreen(
+        view: ViewAllAnimesScreen(
           rankingType: rankingType,
           label: label,
         ),
@@ -37,10 +37,10 @@ Route onGenerateRoute(RouteSettings settings) {
         ),
       );
 
-    case CategoryAnimesScreen.routeName:
+    case CategoryanimesScreen.routeName:
       final category = settings.arguments as AnimeCategory;
       return _cupertinoRoute(
-        view: CategoryAnimesScreen(
+        view: CategoryanimesScreen(
           category: category,
         ),
       );

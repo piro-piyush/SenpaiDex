@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
-import '/common/styles/text_styles.dart';
-import '/models/anime_node.dart';
-import '/screens/anime_details_screen.dart';
-import '/widgets/anime_tile.dart';
+import 'package:senpai_dex/common/styles/text_styles.dart';
+import 'package:senpai_dex/models/anime_node.dart';
+import 'package:senpai_dex/screens/anime_details_screen.dart';
+import 'package:senpai_dex/widgets/anime_tile.dart';
 
 class AnimeHorizontalListView extends StatelessWidget {
   const AnimeHorizontalListView({
@@ -38,10 +37,10 @@ class AnimeHorizontalListView extends StatelessWidget {
                     final anime = animes[index];
                     return GestureDetector(
                       onTap: () {
-                        // Navigator.of(context).pushNamed(
-                        //   AnimeDetailsScreen.routeName,
-                        //   arguments: anime.id,
-                        // );
+                        Navigator.of(context).pushNamed(
+                          AnimeDetailsScreen.routeName,
+                          arguments: anime.id,
+                        );
                       },
                       child: AnimeTile(anime: anime),
                     );

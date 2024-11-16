@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:senpai_dex/models/anime_category.dart';
 import 'package:senpai_dex/views/anime_grid_view.dart';
-
-import '/models/anime_category.dart';
 
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({super.key});

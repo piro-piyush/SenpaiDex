@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:senpai_dex/api/get_seasonal_animes_api.dart';
+import 'package:senpai_dex/core/screens/error_screen.dart';
+import 'package:senpai_dex/core/widgets/loader.dart';
 import 'package:senpai_dex/views/anime_list_view.dart';
-import '../api/get_seasonal_animes_api.dart';
-import '/core/screens/error_screen.dart';
-import '/core/widgets/loader.dart';
 
 class ViewAllSeasonalAnimesScreen extends StatefulWidget {
   const ViewAllSeasonalAnimesScreen({

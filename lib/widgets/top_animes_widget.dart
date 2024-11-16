@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:senpai_dex/api/get_anime_by_ranking_type.dart';
+import 'package:senpai_dex/api/get_anime_by_ranking_type_api.dart';
 import 'package:senpai_dex/core/screens/error_screen.dart';
 import 'package:senpai_dex/core/widgets/loader.dart';
-import 'package:senpai_dex/widgets/top_anime_image_slider.dart';
+import 'package:senpai_dex/widgets/top_animes_image_slider.dart';
 
 class TopAnimesList extends StatelessWidget {
   const TopAnimesList({super.key});
@@ -19,7 +19,7 @@ class TopAnimesList extends StatelessWidget {
         if (snapshot.data != null) {
           final animes = snapshot.data!.toList();
           // return data
-          return TopAnimeImageSlider(animes: animes);
+          return TopAnimesImageSlider(animes: animes);
         }
 
         return ErrorScreen(error: snapshot.error.toString());

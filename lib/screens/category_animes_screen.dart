@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:senpai_dex/api/get_anime_by_ranking_type.dart';
-import '/core/screens/error_screen.dart';
-import '/core/widgets/loader.dart';
-import '/models/anime_category.dart';
-import '../views/anime_list_view.dart';
+import 'package:senpai_dex/api/get_anime_by_ranking_type_api.dart';
+import 'package:senpai_dex/core/screens/error_screen.dart';
+import 'package:senpai_dex/core/widgets/loader.dart';
+import 'package:senpai_dex/models/anime_category.dart';
+import 'package:senpai_dex/views/anime_list_view.dart';
 
-class CategoryAnimesScreen extends StatelessWidget {
-  const CategoryAnimesScreen({
+class CategoryanimesScreen extends StatelessWidget {
+  const CategoryanimesScreen({
     super.key,
     required this.category,
   });

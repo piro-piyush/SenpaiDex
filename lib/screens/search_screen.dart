@@ -1,10 +1,9 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import '/api/get_anime_by_search_api.dart';
-import '/common/styles/paddings.dart';
-import '/models/anime.dart';
-import '/models/anime_node.dart';
-import '/widgets/anime_list_tile.dart';
+import 'package:senpai_dex/api/get_anime_by_search_api.dart';
+import 'package:senpai_dex/common/styles/paddings.dart';
+import 'package:senpai_dex/models/anime.dart';
+import 'package:senpai_dex/models/anime_node.dart';
+import 'package:senpai_dex/widgets/anime_list_tile.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -79,7 +78,7 @@ class AnimeSearchDelegate extends SearchDelegate<List<AnimeNode>> {
   Iterable<Anime> animes = [];
 
   Future searchAnime(String query) async {
-    final animes = await getAnimeBySearchApi(query: query);
+    final animes = await getAnimesbySearchApi(query: query);
 
     this.animes = animes.toList();
   }
@@ -124,7 +123,7 @@ class AnimeSearchDelegate extends SearchDelegate<List<AnimeNode>> {
       );
     } else {
       return FutureBuilder<Iterable<Anime>>(
-        future: getAnimeBySearchApi(query: query),
+        future: getAnimesbySearchApi(query: query),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(

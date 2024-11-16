@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '/common/styles/paddings.dart';
-import '/widgets/anime_list_tile.dart';
-import '/models/anime.dart';
+import 'package:senpai_dex/common/styles/paddings.dart';
+import 'package:senpai_dex/models/anime.dart';
+import 'package:senpai_dex/widgets/anime_list_tile.dart';
 
 class AnimeListView extends StatelessWidget {
   const AnimeListView({

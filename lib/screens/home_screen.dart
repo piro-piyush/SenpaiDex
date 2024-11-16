@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '/screens/animes_screen.dart';
-import '/screens/categories_screen.dart';
-import '/screens/search_screen.dart';
-import '/screens/settings_screen.dart';
+import 'package:senpai_dex/screens/animes_screen.dart';
+import 'package:senpai_dex/screens/categories_screen.dart';
+import 'package:senpai_dex/screens/search_screen.dart';
+import 'package:senpai_dex/screens/settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({

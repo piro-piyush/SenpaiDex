@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '/common/styles/paddings.dart';
-import '/cubits/anime_title_language_cubit.dart';
-import '/cubits/theme_cubit.dart';
+import 'package:senpai_dex/common/styles/paddings.dart';
+import 'package:senpai_dex/cubits/anime_title_language_cubit.dart';
+import 'package:senpai_dex/cubits/theme_cubit.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
