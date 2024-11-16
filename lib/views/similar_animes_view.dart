@@ -35,7 +35,7 @@ class SimilarAnimesView extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             shrinkWrap: true,
-            itemCount: animes!.length,
+            itemCount: animes.length,
             separatorBuilder: (context, index) {
               return const SizedBox(width: 10);
             },
