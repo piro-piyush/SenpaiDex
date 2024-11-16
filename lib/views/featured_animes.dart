@@ -47,8 +47,10 @@ class FeaturedAnimes extends StatelessWidget {
                       onPressed: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => ViewAllAnimesScreen(
-                                rankingType: rankingType, label: label),
+                            builder: (context) => ViewAllAnimesScreen(
+                              rankingType: rankingType,
+                              label: label,
+                            ),
                           ),
                         );
                       },

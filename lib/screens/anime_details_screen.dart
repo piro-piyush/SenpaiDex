@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:senpai_dex/api/get_anime_details_api.dart';
@@ -119,14 +120,14 @@ class AnimeDetailsScreen extends StatelessWidget {
   }) =>
       Stack(
         children: [
-          Image.network(
-            imageUrl,
+          CachedNetworkImage(
+            imageUrl: imageUrl,
             fit: BoxFit.cover,
             height: 400,
             width: double.infinity,
           ),
           Positioned(
-            top: 30,
+            top: 40,
             left: 20,
             child: Builder(builder: (context) {
               return IosBackButton(

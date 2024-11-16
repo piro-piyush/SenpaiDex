@@ -15,7 +15,9 @@ class IosBackButton extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(8.0),
       child: InkWell(
-        onTap: onPressed,
+        onTap: () {
+          Navigator.of(context).pop;
+        },
         child: SizedBox(
           width: 35,
           height: 35,

@@ -74,6 +74,6 @@ CupertinoPageRoute _cupertinoRoute({
   required Widget view,
 }) {
   return CupertinoPageRoute(
-    builder: (_) => view,
+    builder: (context) => view,
   );
 }

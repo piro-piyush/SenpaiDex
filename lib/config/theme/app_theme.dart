@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static final darkTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.blueGrey.shade900,
+    scaffoldBackgroundColor: Colors.black,
     primaryColor: Colors.white,
     shadowColor: Colors.black54,
     iconTheme: const IconThemeData(color: Colors.white),

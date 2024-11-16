@@ -46,7 +46,7 @@ class SimilarAnimesView extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (_) => AnimeDetailsScreen(
+                      builder: (context) => AnimeDetailsScreen(
                         id: anime.id,
                       ),
                     ),
