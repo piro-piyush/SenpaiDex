@@ -16,7 +16,7 @@ class IosBackButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(8.0),
       child: InkWell(
         onTap: () {
-          Navigator.of(context).pop;
+          Navigator.of(context).pop();
         },
         child: SizedBox(
           width: 35,
